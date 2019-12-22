@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Maps</string>
+    <!-- Enter your API key here -->
+    <string name="places_api_key">AIzaSyCXfGTCVLrKYyQ0tEZauoby7uxta9_loTI</string>
+</resources>

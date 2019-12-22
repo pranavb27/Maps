@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+
+
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    >
+
+
+    <fragment
+        android:id="@+id/autocomplete_fragment"
+        android:name="com.google.android.libraries.places.widget.AutocompleteSupportFragment"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintEnd_toStartOf="@+id/micIcon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageView
+        android:id="@+id/favorites_icon"
+        android:layout_width="25dp"
+        android:layout_height="26dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="26dp"
+        android:background="@drawable/heart"
+        app:layout_constraintBottom_toTopOf="@+id/map"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/micIcon"
+        android:layout_width="29dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/mic1"
+        app:layout_constraintBottom_toTopOf="@+id/map"
+        app:layout_constraintEnd_toStartOf="@+id/favorites_icon"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/chargeSymbol"
+        app:layout_constraintTop_toBottomOf="@+id/autocomplete_fragment"
+        tools:context="com.example.user.mapapps.MapsActivity"
+        tools:layout_editor_absoluteX="0dp" />
+
+
+<ImageView
+android:id="@+id/SearchIcon"
+android:layout_width="25dp"
+android:layout_height="22dp"
+android:layout_alignParentStart="true"
+android:layout_alignParentLeft="true"
+android:layout_alignParentBottom="true"
+android:layout_marginStart="25dp"
+android:layout_marginLeft="25dp"
+android:layout_marginBottom="5dp"
+android:background="@drawable/searchicon2" app:layout_constraintBottom_toTopOf="@+id/textSearch"
+app:layout_constraintStart_toStartOf="parent" />
+
+<TextView
+android:id="@+id/textSearch"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:layout_alignParentBottom="true"
+android:layout_marginStart="15dp"
+android:layout_marginLeft="15dp"
+
+android:layout_marginBottom="15dp"
+android:text="Search"
+android:textColor="#000000"
+android:textSize="15sp"
+app:layout_constraintBottom_toBottomOf="parent"
+app:layout_constraintStart_toStartOf="parent" />
+
+
+<ImageView
+android:id="@+id/chargeSymbol"
+android:layout_width="37dp"
+android:layout_height="0dp"
+
+android:layout_alignParentBottom="true"
+android:layout_centerHorizontal="true"
+android:layout_marginStart="130dp"
+android:layout_marginLeft="130dp"
+android:layout_marginBottom="5dp"
+android:layout_toRightOf="@+id/SearchIcon"
+android:background="@drawable/charge2"
+app:layout_constraintBottom_toTopOf="@+id/textCharge"
+app:layout_constraintStart_toEndOf="@+id/SearchIcon" />
+
+<TextView
+    android:id="@+id/textCharge"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    android:layout_marginStart="112dp"
+    android:layout_marginLeft="112dp"
+    android:layout_marginBottom="15dp"
+    android:text="Charge"
+    android:textColor="#000000"
+    android:textSize="15sp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintStart_toEndOf="@+id/textSearch" />
+
+
+    <ImageView
+        android:id="@+id/profileIcon"
+        android:layout_width="37dp"
+        android:layout_height="24dp"
+        android:layout_alignParentBottom="true"
+
+        android:layout_marginStart="120dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="3dp"
+        android:layout_toRightOf="@+id/chargeSymbol"
+        android:background="@drawable/profile3"
+        app:layout_constraintBottom_toTopOf="@+id/textProfile"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/chargeSymbol" />
+
+    <TextView
+android:id="@+id/textProfile"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:layout_alignParentBottom="true"
+android:layout_marginStart="110dp"
+
+android:layout_marginLeft="110dp"
+android:layout_marginEnd="18dp"
+
+android:layout_marginRight="18dp"
+android:layout_marginBottom="16dp"
+android:text="Profile"
+android:textColor="#000000"
+android:textSize="15sp"
+app:layout_constraintBottom_toBottomOf="parent"
+app:layout_constraintEnd_toEndOf="parent"
+app:layout_constraintHorizontal_bias="1.0"
+app:layout_constraintStart_toEndOf="@+id/textCharge" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+<!--
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/topPanel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+        <fragment
+            android:id="@+id/autocomplete_fragment"
+            android:name="com.google.android.libraries.places.widget.AutocompleteSupportFragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+    </LinearLayout>
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/topPanel"
+        tools:context="com.example.user.mapapps.MapsActivity" />
+
+-->
+
+    <!--<ImageView-->
+    <!--android:id="@+id/powered_by_google_inner"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:padding="8dp"-->
+    <!--android:src="@drawable/places_powered_by_google_light" />-->
+
+
+
